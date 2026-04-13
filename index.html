@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星际放映厅 - 专业AI服务合租与代充平台 | 628AI</title>
+    <meta name="description" content="星际放映厅是国内领先的AI工具服务平台，提供ChatGPT Plus、Claude Pro、SuperGrok、Gemini Pro等主流AI大模型的合租、代充及账号购买服务。正规ICP备案，支持支付宝，价格低至14元/月起。">
+    <meta name="keywords" content="星际放映厅,ChatGPT Plus合租,Claude Pro代充,SuperGrok账号,AI工具合租,AI代充,628AI">
+    <meta name="author" content="628AI">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://628ai.github.io/">
+    <meta property="og:title" content="星际放映厅 - 专业AI服务合租与代充平台">
+    <meta property="og:description" content="国内领先的AI工具服务平台，提供ChatGPT、Claude、Grok等主流AI大模型服务，价格低至14元/月起">
+    <meta property="og:image" content="https://628ai.github.io/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://628ai.github.io/">
+    <meta property="twitter:title" content="星际放映厅 - 专业AI服务合租与代充平台">
+    <meta property="twitter:description" content="国内领先的AI工具服务平台，提供ChatGPT、Claude、Grok等主流AI大模型服务">
+    <meta property="twitter:image" content="https://628ai.github.io/og-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://628ai.github.io/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌌</text></svg>">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "星际放映厅 - 628AI",
+        "url": "https://628ai.github.io/",
+        "description": "专业AI服务合租与代充平台",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://628ai.github.io/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "星际放映厅",
+        "url": "https://www.naifeistation.com/i/EJYCBJ",
+        "logo": "https://628ai.github.io/logo.png",
+        "description": "专注于海外AI工具和流媒体服务的综合平台",
+        "foundingDate": "2023",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "CN"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #06b6d4;
+            --dark-bg: #0f172a;
+            --darker-bg: #020617;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --star-color: rgba(255, 255, 255, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--darker-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Starfield Background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .star {
+            position: absolute;
+            background: var(--star-color);
+            border-radius: 50%;
+            animation: twinkle var(--duration) ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-3);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-primary);
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #a5b4fc, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gradient-1);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Features Section */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--accent-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .price-tag {
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-color);
+        }
+
+        .price-unit {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: gap 0.3s;
+        }
+
+        .service-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 24px;
+            padding: 3rem;
+            margin: 4rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            overflow-x: auto;
+            display: block;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-table th {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .comparison-table td {
+            color: var(--text-secondary);
+        }
+
+        .comparison-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--text-primary);
+        }
+
+        .check-icon {
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-primary);
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 200px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+            color: var(--accent-color);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(15, 23, 42, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .official-link {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            transition: all 0.3s;
+            word-break: break-all;
+        }
+
+        .official-link:hover {
+            background: rgba(99, 102, 241, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-stats {
+                gap: 2rem;
+            }
+
+            .comparison-section {
+                padding: 1.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.875rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--darker-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Selection */
+        ::selection {
+            background: rgba(99, 102, 241, 0.3);
+            color: var(--text-primary);
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Starfield Background -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>🌌</span>
+                <span>628AI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">AI服务</a></li>
+                <li><a href="#comparison">方案对比</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="https://www.naifeistation.com/i/EJYCBJ" target="_blank">官网入口</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <span>✨</span>
+                <span>浙ICP备2023017856号 | 正规备案平台</span>
+            </div>
+            <h1>星际放映厅<br>专业AI服务平台</h1>
+            <p class="hero-subtitle">
+                国内领先的AI工具合租与代充服务平台，提供ChatGPT Plus、Claude Pro、SuperGrok等主流大模型服务。
+                无需海外信用卡，支持支付宝，低至14元/月起。
+            </p>
+            <div class="cta-group">
+                <a href="https://www.naifeistation.com/i/EJYCBJ" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <span>🚀</span>
+                    <span>立即访问官网</span>
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <span>📋</span>
+                    <span>查看服务详情</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">主流AI工具</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">70%</span>
+                    <span class="stat-label">成本节省</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">在线客服</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">秒发</span>
+                    <span class="stat-label">账号交付</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="section-header fade-in">
+            <span class="section-tag">核心服务</span>
+            <h2>主流AI工具全覆盖</h2>
+            <p class="section-desc">
+                提供合租、代充、独立账号三种服务模式，满足不同场景需求
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <!-- ChatGPT -->
+            <article class="service-card fade-in">
+                <div class="service-icon">🤖</div>
+                <h3>ChatGPT Plus</h3>
+                <p>支持GPT-5.4、GPT-4o、Codex、Sora等最新模型，解锁联网、插件、代码解释器等全功能。</p>
+                <ul class="service-features">
+                    <li>合租低至26元/月</li>
+                    <li>独立账号53元/月起</li>
+                    <li>代充152元/月（优惠后）</li>
+                    <li>无需提供账号密码</li>
+                </ul>
+                <div class="price-tag">
+                    <span class="price">¥14</span>
+                    <span class="price-unit">起/月</span>
+                </div>
+                <a href="https://www.naifeistation.com/i/EJYCBJ" class="service-link" target="_blank">
+                    了解详情 →
+                </a>
+            </article>
+
+            <!-- Claude -->
+            <article class="service-card fade-in">
+                <div class="service-icon" style="background: var(--gradient-2);">🧠</div>
+                <h3>Claude Pro</h3>
+                <p>Anthropic旗舰模型，Claude Opus 4.6与Sonnet 4.5，支持Claude Code编程功能，长文本处理专家。</p>
+                <ul class="service-features">
+                    <li>合租14元/月起</li>
+                    <li>独立账号205元/月</li>
+                    <li>代充216元/月（优惠后）</li>
+                    <li>专业推理与编程辅助</li>
+                </ul>
+                <div class="price-tag">
+                    <span class="price">¥14</span>
+                    <span class="price-unit">起/月</span>
+                </div>
+                <a href="https://www.naifeistation.com/i/EJYCBJ" class="service-link" target="_blank">
+                    了解详情 →
+                </a>
+            </article>
+
+            <!-- SuperGrok -->
+            <article class="service-card fade-in">
+                <div class="service-icon" style="background: var(--gradient-3);">🚀</div>
+                <h3>SuperGrok</h3>
+                <p>马斯克xAI出品，Grok 4.2模型，支持DeepSearch深度搜索、多智能体系统、实时X平台数据。</p>
+                <ul class="service-features">
+                    <li>合租65元/月</li>
+                    <li>独立账号67.9元/月起</li>
+                    <li>代充201元/月（年付）</li>
+                    <li>Aurora图像生成</li>
+                </ul>
+                <div class="price-tag">
+                    <span class="price">¥65</span>
+                    <span class="price-unit">起/月</span>
+                </div>
+                <a href="https://www.naifeistation.com/i/EJYCBJ" class="service-link" target="_blank">
+                    了解详情 →
+                </a>
+            </article>
+
+            <!-- Gemini -->
+            <article class="service-card fade-in">
+                <div class="service-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);">💎</div>
+                <h3>Gemini Pro</h3>
+                <p>Google AI旗舰，Gemini 3.1 Pro多模态理解，超长上下文窗口，适合学术研究与复杂分析。</p>
+                <ul class="service-features">
+                    <li>独立账号150元/月</li>
+                    <li>代充148元/月（年付）</li>
+                    <li>原生Google账号</li>
+                    <li>多模态全功能</li>
+                </ul>
+                <div class="price-tag">
+                    <span class="price">¥148</span>
+                    <span class="price-unit">起/月</span>
+                </div>
+                <a href="https://www.naifeistation.com/i/EJYCBJ" class="service-link" target="_blank">
+                    了解详情 →
+                </a>
+            </article>
+
+            <!-- Midjourney -->
+            <article class="service-card fade-in">
+                <div class="service-icon" style="background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);">🎨</div>
+                <h3>Midjourney</h3>
+                <p>顶级AI图像生成工具，原生独立账号权限，支持高清出图与商业使用，低于官方3折价格。</p>
+                <ul class="service-features">
+                    <li>原生独立账号</li>
+                    <li>低于官方3折</li>
+                    <li>支持高清生成</li>
+                    <li>商业使用授权</li>
+                </ul>
+                <div class="price-tag">
+                    <span class="price">¥30</span>
+                    <span class="price-unit">起/月</span>
+                </div>
+                <a href="https://www.naifeistation.com/i/EJYCBJ" class="service-link" target="_blank">
+                    了解详情 →
+                </a>
+            </article>
+
+            <!-- Poe -->
+            <article class="service-card fade-in">
+                <div class="service-icon" style="background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);">🔮</div>
+                <h3>Poe会员</h3>
+                <p>聚合多模型平台，一站式体验GPT-5.4、Claude、Gemini等主流AI，支持自定义机器人。</p>
+                <ul class="service-features">
+                    <li>合租26元/月</li>
+                    <li>多模型统一界面</li>
+                    <li>自定义机器人</li>
+                    <li>性价比高</li>
+                </ul>
+                <div class="price-tag">
+                    <span class="price">¥26</span>
+                    <span class="price-unit">/月</span>
+                </div>
+                <a href="https://www.naifeistation.com/i/EJYCBJ" class="service-link" target="_blank">
+                    了解详情 →
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section" id="comparison">
+        <div class="comparison-section fade-in">
+            <div class="section-header">
+                <span class="section-tag">方案选择</span>
+                <h2>三种服务模式对比</h2>
+                <p class="section-desc">根据您的使用频率和隐私需求，选择最适合的方案</p>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>对比维度</th>
+                            <th>合租服务</th>
+                            <th>代充服务</th>
+                            <th>独立账号</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>月成本</strong></td>
+                            <td>14-67元</td>
+                            <td>121-227元</td>
+                            <td>53-232元</td>
+                        </tr>
+                        <tr>
+                            <td><strong>账号所有权</strong></td>
+                            <td>共享账号</td>
+                            <td>用户自有</td>
+                            <td>平台提供新号</td>
+                        </tr>
+                        <tr>
+                            <td><strong>数据隐私</strong></td>
+                            <td>会话隔离</td>
+                            <td>完整保留历史</td>
+                            <td>全新账号</td>
+                        </tr>
+                        <tr>
+                            <td><strong>稳定性</strong></td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>功能完整性</strong></td>
+                            <td>90-95%</td>
+                            <td>100%</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>适用人群</strong></td>
+                            <td>轻度用户、体验型</td>
+                            <td>已有账号的老用户</td>
+                            <td>企业用户、重度依赖</td>
+                        </tr>
+                        <tr>
+                            <td><strong>交付时效</strong></td>
+                            <td>秒发</td>
+                            <td>24小时内</td>
+                            <td>1-2小时</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    💡 <strong>优惠提示：</strong>使用优惠码 <span style="color: var(--accent-color); font-weight: bold;">ceo</span> 可享受93折优惠
+                </p>
+                <a href="https://www.naifeistation.com/i/EJYCBJ" class="btn btn-primary" target="_blank">
+                    立即注册享受优惠
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="section-header fade-in">
+            <span class="section-tag">帮助中心</span>
+            <h2>常见问题解答</h2>
+            <p class="section-desc">关于星际放映厅服务的常见疑问</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item fade-in">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>星际放映厅是什么平台？是否正规？</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>星际放映厅成立于2023年，是专注于海外AI工具和流媒体服务的综合平台，已完成浙江省ICP备案（浙ICP备2023017856号），主体信息公开可查。平台提供7×24小时真人在线客服，所有服务均支持全程质保（包售后），并可开具正规发票。</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>代充服务安全吗？需要提供账号密码吗？</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>对于ChatGPT Plus代充，星际放映厅采用24小时自助充值模式，<strong>无需提供账号密码</strong>，仅需提供邮箱即可完成充值，安全性更高。对于其他服务如Claude、Grok等，需要暂时提供密码以便技术人员登录充值，建议充值完成后立即修改密码。</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>合租账号是否独立？会不会看到别人的对话？</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>合租服务采用技术手段实现会话隔离，各用户拥有独立的会话记录，互不干扰。您只能看到自己的对话历史，无法查看其他合租用户的内容。但请注意，合租账号稳定性略低于独立账号，高峰期可能存在响应延迟。</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>支持哪些支付方式？如何开发票？</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>平台支持支付宝付款，无需海外信用卡。企业用户批量采购可联系客服开具正规发票。个人用户如需发票也可在订单完成后联系客服申请。</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>如果账号出现问题怎么办？</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>星际放映厅提供全年无休的真人在线客服支持。所有服务均提供全程质保（包售后），如遇账号封禁等问题，平台将协助处理或提供替换方案。建议购买后妥善保管账号信息，遵守平台用户协议。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="text-align: center; padding: 4rem 2rem;">
+        <div class="fade-in" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 24px; padding: 3rem; max-width: 800px; margin: 0 auto;">
+            <h2 style="margin-bottom: 1rem;">准备好开始使用了吗？</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.125rem;">
+                立即访问星际放映厅官网，注册即享优惠<br>
+                <span style="color: var(--accent-color); font-weight: 600;">优惠码：ceo（93折）</span>
+            </p>
+            <a href="https://www.naifeistation.com/i/EJYCBJ" class="btn btn-primary" target="_blank" style="font-size: 1.125rem; padding: 1.25rem 2.5rem;">
+                <span>🌟</span>
+                <span>访问星际放映厅官网</span>
+            </a>
+            <p style="margin-top: 1.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                官网地址：<a href="https://www.naifeistation.com/i/EJYCBJ" class="official-link" target="_blank">https://www.naifeistation.com/i/EJYCBJ</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于628AI</h4>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    本站为星际放映厅AI服务的介绍与导航页面，致力于为国内用户提供便捷的AI工具获取渠道信息。
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="https://www.naifeistation.com/i/EJYCBJ" target="_blank">星际放映厅官网</a></li>
+                    <li><a href="#services">AI服务列表</a></li>
+                    <li><a href="#comparison">方案对比</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>热门服务</h4>
+                <ul>
+                    <li><a href="https://www.naifeistation.com/i/EJYCBJ" target="_blank">ChatGPT Plus合租</a></li>
+                    <li><a href="https://www.naifeistation.com/i/EJYCBJ" target="_blank">Claude Pro代充</a></li>
+                    <li><a href="https://www.naifeistation.com/i/EJYCBJ" target="_blank">SuperGrok账号</a></li>
+                    <li><a href="https://www.naifeistation.com/i/EJYCBJ" target="_blank">Midjourney订阅</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <p style="color: var(--text-secondary);">
+                    如需帮助，请访问星际放映厅官网联系客服<br><br>
+                    <a href="https://www.naifeistation.com/i/EJYCBJ" class="official-link" target="_blank">
+                        访问官网 →
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 628AI. All rights reserved. | 星际放映厅官网：<a href="https://www.naifeistation.com/i/EJYCBJ" style="color: var(--accent-color);" target="_blank">https://www.naifeistation.com/i/EJYCBJ</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem;">
+                免责声明：本站仅为信息展示平台，具体服务以星际放映厅官网为准。使用第三方代充服务存在一定风险，请用户自行评估并承担相应责任。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Generate stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 100;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.setProperty('--duration', (Math.random() * 3 + 2) + 's');
+                star.style.animationDelay = Math.random() * 5 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ toggle
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                faq.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize
+        createStars();
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.background = 'rgba(15, 23, 42, 0.95)';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.padding = '1rem';
+            navLinks.style.backdropFilter = 'blur(12px)';
+        }
+    </script>
+</body>
+</html>
